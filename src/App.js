@@ -8,6 +8,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">peekaboo Test-App</h1>
+          <h2>React Startup</h2>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
