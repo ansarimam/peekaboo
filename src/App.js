@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+
 //import {Button} from 'react-bootstrap';
-
-
 //import './bootstrap/css/bootstrap.css';
-
 //import './bootstrap/js/jquery.js';
-//import logo from './logo.svg';
+//import bg from './bg.jpeg';
 //import $ from 'jquery'
 
 import './App.css';
 
 
-let name = 'Hello'
-let red = 'pink'
-let tagLineStyle = {color: red, 'font-size': '12px', 'font-family': 'times new roman'}
+// let name = 'Hello'
+// let red = 'pink'
+// let tagLineStyle = {color: red, 'font-size': '12px', 'font-family': 'times new roman'}
 
 
-class App extends Component {
+class TopNav extends Component {
   render() {
     return (
-      <main bsStyle='jumbotorn'>
-
         <div  className="navbar default">
           <div className="container-fluid">
             <div className="navbar-header">
@@ -34,17 +31,47 @@ class App extends Component {
             </ul>
           </div>
         </div>
+    )
+  }
+}
+
+class MainBanner extends Component {
+  render() {
+    return(
+      
+      <Grid fluid style={{'background':'#222', 'padding':'30px'}}>
+        <Row>
+          <Col xs={12}>
+            <Row center="xs">
+              <Col md={4} style={{'background':'lightgreen', 'height':'280px'}}>
+                <input type="text" />
+              </Col>
+              <Col md={4} style={{'background':'lightpink', 'height':'280px'}}> 02 </Col>
+>
+            </Row>
+          </Col>
+        </Row>
+      </Grid>
 
 
-          <header className="App-header">
-            <h1 className="App-title">peekaboo Test-App</h1>
-            <h4 style={tagLineStyle} >React Startup, {name}</h4>
-          </header>
+      /* <div className="show-grid" style={{'background-color': '#222'}}>
+      <input type="text" placeholder='Search'/> */
 
-          
-          <p>
-              main area
-          </p>
+    )
+  }
+}
+
+
+
+class App extends Component {
+  render() {
+    return (
+      <main>
+        
+        <TopNav/>
+        <MainBanner/>
+
+
 
       </main>
     );
